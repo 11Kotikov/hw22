@@ -7,8 +7,10 @@ def new_contact():
     return {'Name': first_name, 'Surname': second_name,
             'Mobile': cellphone_number, 'Home number': homephone_number,
             'Note': comment}
+
+
 def phone_book():
     with open('phone_book.csv', 'a+') as pb:
-        for key,val in new_contact().items():
-            pb.write('{}: {};'.format(key,val))
+        for key, val in new_contact().items():
+            pb.write('{}: {}; '.format(key, val))
         pb.write('\n')

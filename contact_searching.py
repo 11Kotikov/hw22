@@ -2,12 +2,16 @@ import os
 
 
 def open_full_book():
-    with open('phone_book.csv') as pb:
-        while True:
-            lines = pb.readline()
-            if not lines:
-                break
-            print(lines.strip())
+    empty = 'phone_book.csv'
+    if os.path.getsize(empty) == 0:
+        print('The phone book is empty, please add at least one contact')
+    else:
+        with open('phone_book.csv') as pb:
+            while True:
+                lines = pb.readline()
+                if not lines:
+                    break
+                print(lines.strip())
 
 
 def contact_searching():

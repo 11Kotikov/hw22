@@ -9,7 +9,7 @@ def new_contact():
             'Note': comment}
 
 
-def phone_book():
+def add_to_phone_book():
     with open('phone_book.csv', 'a+') as pb:
         for key, val in new_contact().items():
             pb.write('{}: {}; '.format(key, val))

@@ -8,5 +8,3 @@ def delete_contact ():
                 npb.write(line)
     os.remove('phone_book.csv')
     os.rename('new_phonebook.csv', 'phone_book.csv')
-        
-delete_contact()

@@ -12,10 +12,10 @@ import export_contacts as export
 def output_hub():
     ui.user_interface()
     number = check.input_check()
-    if number < 0 or number > 9:
-        print('Error: Wrong choise')
-        check.input_check()
-    elif number == 0:
+    # if number < 0 or number > 9:
+    #     print('Error: Wrong choise')
+    #     check.input_check()
+    if number == 0:
         npb.new_clear_book()
         print('You have created a new clean phone book!')
     elif number == 1:
